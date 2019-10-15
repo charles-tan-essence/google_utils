@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="google-utils-cetyz",
+    name="google-utils",
     version="0.0.1",
     author="Charles Edmond Tan",
     author_email="ccetyz@gmail.com",
