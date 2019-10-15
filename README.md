@@ -1,9 +1,9 @@
 # google_utils
 Bunch of classes to make interacting with the official Google API Python Client even easier. Is this a wrapper?
 
-Functionality is limited at the moment but I intend to add the most common functionality that should be used by the casual user. This will include (of course) authentication, and other commonly used services such as sheets or drive.
+Functionality is limited at the moment but I intend to add the most common functionality that should typically be used by the casual user. This will include (of course) authentication, and other commonly used services such as sheets or drive.
 
-At the very least, you can use the Authenticator to obtain credentials that can be used in all of [Google's official API Python Client](https://github.com/googleapis/google-api-python-client). Further documentation for their api client can be found [here](https://github.com/googleapis/google-api-python-client/blob/master/docs/README.md).
+At the very least, you can use the Authenticator from this repo to obtain credentials (see the Authentication step below) that can be used in all of [Google's official API Python Client](https://github.com/googleapis/google-api-python-client). Further documentation for their API client can be found [here](https://github.com/googleapis/google-api-python-client/blob/master/docs/README.md).
 
 ## Step 1: Installation
 
