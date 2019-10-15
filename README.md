@@ -7,9 +7,13 @@ Bunch of classes to make interacting with the official Google API Python Client 
 
 Until then:
 1. Clone the repository
-```$ git clone https://github.com/cetyz/google_utils```
+```
+$ git clone https://github.com/cetyz/google_utils
+```
 2. Use this directory as the working directory.
-```$ cd google_utils```
+```
+$ cd google_utils
+```
 3. Use Pip to install the required packages.
 ```
 $ pip install -r requirements.txt
