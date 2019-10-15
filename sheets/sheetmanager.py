@@ -19,11 +19,6 @@ class SheetManager():
                                valueRenderOption='UNFORMATTED_VALUE')
         response = request.execute()
         values = response['values']
-#        # preview
-#        if (len(values) >= 6):
-#            print(values[:6])
-#        else:
-#            print(values[:len(values)])
         if as_df:
             return(pd.DataFrame(values[1:], columns=values[0]))
         else:
