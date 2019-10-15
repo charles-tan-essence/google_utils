@@ -1,14 +1,20 @@
 # google_utils
-Bunch of classes to make interacting with the official Google API Python Client even easier
+Bunch of classes to make interacting with the official Google API Python Client even easier. Is this a wrapper?
 
-## Step 1: Authentication
+## Step 1: Install dependencies
+
+Use Pip to install the required packages.
+```
+$ pip install -r requirements.txt
+```
+
+## Step 2: Authentication
 
 Start by getting the credentials.
 Files needed:
 - your keys in the json format
 - the scopes in a list
 
-For example:
 ```python
 # first import the authenticator
 from authentication.authenticator import Authenticator
@@ -26,3 +32,22 @@ The credentials (creds) will then be used when initializing the other tools.
 
 ### SCOPES for OAuth 2.0
 List of scopes can be found [here](https://developers.google.com/identity/protocols/googlescopes).
+
+## Step 3: Using the Classes
+
+Use the creds to initialize the Classes that you need. Do make sure the creds have been created with the necessary scopes.
+For instance, the spreadsheets scopes will be needed to use the SheetManager class found in the sheets folder.
+
+```python
+from sheets.sheetmanager import SheetManager
+
+# initialize the sheets_manager with the creds we obtained above from authenticator.get_creds(scopes)
+sheets_manager = SheetManager(creds)
+
+# example usage
+spreadsheetId = 'xxxxxxxxxxxxxxxxxx'
+data_range = 'Sheet!A1:b4'
+
+# returns values as a dataframe with first row as column names
+sheet_values = sheets_manager.get_values(spreadsheetId=spreadsheetId, data_range=data_range) 
+```
