@@ -1,12 +1,20 @@
 # google_utils
 Bunch of classes to make interacting with the official Google API Python Client even easier. Is this a wrapper?
 
-## Step 1: Install dependencies
+## Step 1: Installation
 
-Use Pip to install the required packages.
+(To-do: make the repo installable as a package via pip)
+
+Until then:
+1. Clone the repository
+```$ git clone https://github.com/cetyz/google_utils```
+2. Use this directory as the working directory.
+```$ cd google_utils```
+3. Use Pip to install the required packages.
 ```
 $ pip install -r requirements.txt
 ```
+4. Use it! Refer to the next steps.
 
 ## Step 2: Authentication
 
@@ -29,8 +37,6 @@ creds = authenticator.get_creds(scopes)
 ```
 
 The credentials (creds) will then be used when initializing the other tools.
-
-
 
 ## Step 3: Using the Classes
 
