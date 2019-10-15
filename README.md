@@ -13,7 +13,7 @@ $ pip install -r requirements.txt
 Start by getting the credentials.
 Files needed:
 - your keys in the json format
-- the scopes in a list
+- the scopes in a list. Scopes can be found [here](https://developers.google.com/identity/protocols/googlescopes).
 
 ```python
 # first import the authenticator
@@ -30,8 +30,7 @@ creds = authenticator.get_creds(scopes)
 
 The credentials (creds) will then be used when initializing the other tools.
 
-### SCOPES for OAuth 2.0
-List of scopes can be found [here](https://developers.google.com/identity/protocols/googlescopes).
+
 
 ## Step 3: Using the Classes
 
