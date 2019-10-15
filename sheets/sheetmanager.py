@@ -32,7 +32,12 @@ class SheetManager():
                                   valueInputOption='USER_ENTERED')
         response = request.execute()
         return(response)
-        
+    
+
+
+    # instead of batch update which is quite unwieldy
+    # try to create functions for each task
+    # such as creating borders or something    
     def batch_update(self, spreadsheetId, body):
         resource = self.resource.batchUpdate(spreadsheetId=spreadsheetId,
                                              body=body)
