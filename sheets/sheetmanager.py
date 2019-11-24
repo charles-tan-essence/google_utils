@@ -34,6 +34,15 @@ class SheetManager():
         return(response)
     
 
+    def append_values(self, spreadsheetId, append_range, values):
+        resource = self.resource.values()
+        request = resource.append(spreadsheetId=spreadsheetId,
+                                  range=append_range,
+                                  body={'values': values},
+                                  valueInputOption='USER_ENTERED')
+        response = request.execute()
+        return(response)
+
 
     # instead of batch update which is quite unwieldy
     # try to create functions for each task
