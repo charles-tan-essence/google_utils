@@ -29,7 +29,8 @@ class SheetManager():
         request = resource.update(spreadsheetId=spreadsheetId,
                                   range=update_range,
                                   body={'values': values},
-                                  valueInputOption='USER_ENTERED')
+                                  valueInputOption='USER_ENTERED',
+                                  dateTimeRenderOption='FORMATTED_STRING')
         response = request.execute()
         return(response)
     
