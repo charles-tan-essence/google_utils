@@ -21,6 +21,9 @@ class SheetManager():
                                dateTimeRenderOption='FORMATTED_STRING')
         response = request.execute()
         values = response['values']
+        for row in values[1:]:
+            while len(row) < len(values[0]):
+                row.append('')
         if as_df:
             return(pd.DataFrame(values[1:], columns=values[0]))
         else:
